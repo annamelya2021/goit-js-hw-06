@@ -11,7 +11,12 @@ function onHandleSubmit(event) {
     if (email.value === '' || password.value === '') {
        return alert('Все поля должны форм быть заполнены')
     } else {
-      console.log(`Email: ${email.value}, Password: ${password.value}`);
+      // console.log(`Email: ${email.value}, Password: ${password.value}`);
+      const user = {
+      userEmail: email.value,
+      userPassword: password.value,
+      };
+      console.log(user)
   event.currentTarget.reset();
 }
 }

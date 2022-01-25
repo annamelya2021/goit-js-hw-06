@@ -2,6 +2,7 @@
 const rangeRef  = document.querySelector('#font-size-control')
 const textRef = document.querySelector('#text')
 
+ textRef.style.fontSize = `${rangeRef.value}px`
 
 const onChangeFontSizeText = event =>
 {
