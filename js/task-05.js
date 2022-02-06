@@ -4,10 +4,11 @@ const refs = {
 };
 const onGetInputName = event => {
 
-  if (refs.nameSpan.textContent.length === 0) {
-   return refs.nameSpan.textContent = 'Anonymous';
+  if (refs.input.value === '') {
+    return refs.nameSpan.textContent = 'Anonymous';
+  } else {
+   refs.nameSpan.textContent = event.currentTarget.value;
   }
-   return  refs.nameSpan.textContent = event.currentTarget.value;
 };
 
 refs.input.addEventListener('input', onGetInputName);
